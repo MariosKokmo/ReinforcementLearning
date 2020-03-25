@@ -1,11 +1,11 @@
 class Environment:
     def __init__(self):
-        self.board = np.zeros((LENGTH, LENGTH))
+        self.board = np.zeros((LENGTH, LENGTH)) #initialise the grid to all zeros
         self.x = -1 # represents an x on the board, player 1
         self.o = 1 # represents an o on the board, player 2
         self.winner = None
         self.ended = False
-        self.num_states = 3**(LENGTH*LENGTH) # each tile could be empty,x or o
+        self.num_states = 3**(LENGTH*LENGTH) # each tile could be empty,x or o, we have Length*Length number of tiles
     
     #checks if the location is empty
     def is_empty(self, i, j): 
@@ -28,6 +28,9 @@ class Environment:
         # this is like finding the integer represented by a base-3 number
         # h is the number in base 3
         # k is the exponent at each significant digit. Increases by one each time
+        # v is the value of the digit. the possible values are 0,1,2 because we are in base-3
+        # we scan the whole board row by row left to right so that we extract information about the state
+        # e.g. 000000001 is the state where we have put an x (that is -1) in the top left tile 
         k = 0
         h = 0
         for i in range(LENGTH):
