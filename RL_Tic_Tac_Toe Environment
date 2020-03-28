@@ -72,7 +72,8 @@ class Environment:
                     return True
 
 
-        # check diagonals
+        # check diagonals and if one of the players wins, set him
+        # as a winner and end the game
         for player in (self.x, self.o):
         # top-left -> bottom-right diagonal
             if self.board.trace() == player*LENGTH:
