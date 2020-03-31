@@ -10,8 +10,10 @@ can play against the human player.
 The project consists of three classes (agent, human, environment).
 The rules are simple and well-known, you have to put 3 of your own symbols in a row whether that is a proper row,
 column, or one of the diagonals.
-The board is a classic 3 by 3, but can be easily modifies to be a larger one. In that case the game takes longer, but
+The board is a classic 3 by 3, but can be easily modified to be a larger one. In that case the game takes longer, but
 the difficulty remains the same.
+
+
 ![TicTacToe](300px-Tic_tac_toe.svg[1].png)
 (example of a tic tac toe board (wikipedia))
 
